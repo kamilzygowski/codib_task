@@ -1,4 +1,76 @@
 .MainView{
-    background-color: red;
+    background-color: rgb(111, 35, 182);
     height:inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .filterDiv{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .filterInput{
+        width:350px;
+        height:30px;
+        border-radius: 7px;
+        border:none;
+        text-align: center;
+        font-size:22px;
+        display: flex;
+        
+        &::placeholder{
+            font-size: 22px;
+        }
+    }
+
+    .itemsUl{
+        list-style: none;
+        left:0;
+        right:0;
+        margin:125px auto;
+        min-height: 350px;
+        li{
+            padding-top: 15px;
+            height:55px;
+            font-size: 24px;
+            border-radius: 7.5px;
+            margin-block:10px;
+            text-align: center;
+            width:750px;
+            display: flex;
+            justify-content: center;
+            font-weight: 500;
+            span{
+                font-weight: 700;
+                margin-inline: 35px;
+            } 
+        }
+    }
+
+    .pagination{
+ 
+        .arrowIcon{
+            margin-block:auto;
+            margin-inline: 25px;
+
+         &:hover{
+             color:#000;
+             transition: .5s;
+         }
+        }
+        width:100%;
+        color:#fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
+        font-size: 22px;
+        left:0;
+        right:0;
+        margin-inline: auto;
+    }
+    
 }
+
