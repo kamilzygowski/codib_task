@@ -52,17 +52,14 @@ class MainView extends Component {
         const newState = { ...state, actual_page: state.actual_page - 1 }
         return newState;
     }
-    validateFilterInput() {
-
-    }
     filterForId(arr: any, inputValue: string, total_pages: number) {
-        let filteredArray;
+        let filteredArray: any[];
         filteredArray = [arr.data.filter((element: any) => {
             return element.id === parseInt(inputValue)
         })]
         if (inputValue === '') {
             filteredArray = []
-            const copy: any = [...arr.data]
+            const copy: [][] = [...arr.data]
             for (let i = 0; i < total_pages + 1; i++) {
                 // Copy item list array to make filtering and other funcs easier to apply
                 const slicedArrayPiece = copy.splice(0, 5)
@@ -79,7 +76,7 @@ class MainView extends Component {
         }
     }
     render() {
-        const { prepared_data, actual_page, data, page, per_page, total_items, total_pages, inputId }: any = this.state
+        const { prepared_data, actual_page, data, total_pages, inputId }: any = this.state
         return (
             <div className='MainView'>
                 <div className='filterDiv'>
@@ -94,7 +91,7 @@ class MainView extends Component {
                     <button className='filterButton' onClick={() => this.setState({
                         prepared_data: this.filterForId(data, inputId, total_pages),
                         actual_page: 1,
-                        total_pages: this.filterForId(data, inputId, total_pages).length > 1 ? 2 : 1
+                        total_pages: this.filterForId(data, inputId, total_pages).length
                     })}><FontAwesomeIcon icon={faMagnifyingGlass} className="searchIcon" />search</button>
                 </div>
                 <ul className='itemsUl'>
