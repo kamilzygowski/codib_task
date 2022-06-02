@@ -1,10 +1,9 @@
 .MainView {
-    background-color: rgb(138, 57, 214);
+    background-image: linear-gradient(358.4deg, rgba(249, 151, 119, 1) -2.1%, rgba(98, 58, 162, 1) 90%);
     height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     .filterDiv {
         width: 100%;
         display: flex;
@@ -24,9 +23,11 @@
             &:hover {
                 transition: 0.4s;
                 background: rgb(243, 230, 175);
+                cursor: pointer;
             }
         }
         .filterInput {
+            margin-left: 115px;
             width: 350px;
             height: 35px;
             border-radius: 7px;
@@ -41,7 +42,6 @@
             }
         }
     }
-
     .itemsUl {
         list-style: none;
         left: 0;
@@ -60,9 +60,26 @@
             justify-content: center;
             font-weight: 500;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+            &:nth-child(1) {
+                animation: swing 8s infinite;
+            }
+            &:nth-child(3) {
+                animation: swing 8s infinite;
+            }
+            &:nth-child(5) {
+                animation: swing 8s infinite;
+            }
+            &:nth-child(2) {
+                animation: swingReverse 8s infinite;
+            }
+            &:nth-child(4) {
+                animation: swingReverse 8s infinite;
+            }
             span {
                 font-weight: 700;
                 margin-inline: 35px;
+                color: rgb(53, 38, 38);
             }
         }
     }
@@ -75,13 +92,16 @@
             background: rgb(28, 126, 36);
             padding: 5px;
             border-radius: 10px;
-
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 6px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            animation: shine 3s infinite;
             &:hover {
                 color: rgb(28, 126, 36);
                 transition: 0.5s;
                 background: #fff;
+                cursor: pointer;
             }
         }
+        margin-top: 55px;
         letter-spacing: 7.5px;
         width: 100%;
         color: #fff;
@@ -94,5 +114,23 @@
         left: 0;
         right: 0;
         margin-inline: auto;
+    }
+}
+
+@keyframes shine {
+    50% {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px,
+            rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    }
+}
+
+@keyframes swing {
+    50% {
+        margin-left: -2.5px;
+    }
+}
+@keyframes swingReverse {
+    50% {
+        margin-left: 2.5px;
     }
 }

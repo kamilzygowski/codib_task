@@ -99,7 +99,7 @@ class MainView extends Component {
                 </div>
                 <ul className='itemsUl'>
                     {prepared_data[actual_page - 1] !== undefined && prepared_data !== undefined ? prepared_data[actual_page - 1].map((element: any, index: number) => {
-                        return <li className='itemsLi' key={index} style={{ background: `${element.color}` }}> <span>ID:</span> {element.id}  <span>Color:</span> {element.name}  <span>Year:</span> {element.year}</li>
+                        return <li className='itemsLi' key={index} style={{ background: `${element.color}` }}> <span>ID</span> {element.id}  <span>Name</span> {element.name}  <span>Year</span> {element.year}</li>
                     }) : null}
                     <div className='pagination'>
                         <FontAwesomeIcon icon={faArrowLeft} className='arrowIcon' onClick={() => this.arrowClickHandler('left', actual_page, total_pages)} />
