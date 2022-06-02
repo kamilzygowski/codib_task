@@ -62,19 +62,19 @@
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
             &:nth-child(1) {
-                animation: swing 8s infinite;
+                animation: swing 12s infinite;
             }
             &:nth-child(3) {
-                animation: swing 8s infinite;
+                animation: swing 12s infinite;
             }
             &:nth-child(5) {
-                animation: swing 8s infinite;
+                animation: swing 12s infinite;
             }
             &:nth-child(2) {
-                animation: swingReverse 8s infinite;
+                animation: swingReverse 12s infinite;
             }
             &:nth-child(4) {
-                animation: swingReverse 8s infinite;
+                animation: swingReverse 12s infinite;
             }
             span {
                 font-weight: 700;
